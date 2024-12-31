@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* 全局开屏动画
+body{
+	animation: fadeInAnimation ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+} */
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* 全局字体设置 */
+@font-face {
+  font-family: MiLan;
+  src:url("../font/MI_LanTing_Regular.ttf")
+}
+body{
+  font-family: MiLan;
+  src:url("../font/MI_LanTing_Regular.ttf")
+}
+/* 基础容器布局 */
+body footer{
+	margin-top: 80px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.container{
+	padding-right:15px;
+	padding-left:15px;
+	margin-right:auto;
+	margin-left:auto;
+}
+.container-fluid{
+	width:100%;
+	padding-right:15px;
+	padding-left:15px;
+	margin-right:auto;
+	margin-left:auto
+}
+@media (min-width:576px){
+	.container{max-width:540px}
+}
+@media (min-width:768px){
+	.container{max-width:720px}
+}
+@media (min-width:992px){
+	.container{max-width:960px}
+}
+@media (min-width:1200px){
+	.container{max-width:1140px}
+}
+.input-container{
+	margin-right: 21.6px; /* 输入框元素溢出修复 */
+}
+
+h1{
+	margin-top: 80px;
+	margin-bottom: 50px;
+	user-select:none;
+}
+p{
+	margin-top:10px;
+	margin-bottom:5px;
+	user-select:none;
+}
+
+a{
+	color: #008AFF;
+	text-decoration:none;
+}
+a:hover{
+	color: #1EC5FF;
+}
+a:active{
+	color: #007DB5;
+}
+
+input[type="text"] {
+    font-size: 20px; /* 调整输入框字体大小 */
+    padding: 10px; /* 调整输入框内边距 */
+    border: 1px solid #ccc; /* 修改输入框边框样式 */
+    border-radius: 5px; /* 圆角边框 */
+    width: 100%; /* 调整输入框宽度 */
+}
+
+input[type="checkbox"] {
+	/* transform: scale(1.2); */
+	position: absolute;
+	margin: 5px 0px 0px 10px;
+	vertical-align: middle;
+}
+
+button {
+    font-size: 18px; /* 调整按钮字体大小 */
+    padding: 4px 10px; /* 调整按钮内边距 */
+    background-color: #f8f8f8; /* 修改按钮背景颜色 */
+    border: 1px solid #ccc; /* 修改按钮边框样式 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer;
+	user-select:none;
+	transform: background 0.5s;
+    -moz-transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+}
+button:hover {
+    border: 1px solid #000; /* 修改按钮边框样式 */
+}
+button:active {
+    border: 1px solid #00BDFF; /* 修改按钮背景颜色 */
+}
+.button{
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.label{
+	margin-bottom: 10px;
+	user-select:none;
+}
+
+footer{
+	position: absolute;
+	bottom: 8px;
+	left: 12px;
+	font-size: 12px;
+	color: #dadada;
+}
+
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+    display: none;
+    animation: fadeOut 3.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.options > * {
+    margin-right: 20px;
+}
+
+#text-input {
+    align-self: flex-start;
+}
+.generated-link {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 1s;
+}
+.generated-link.show {
+    display: block;
+	margin-right: 21.6px;  /* 输出框元素溢出修复 */
+}
+.copy-button {
+    margin-top: 10px;
+}
